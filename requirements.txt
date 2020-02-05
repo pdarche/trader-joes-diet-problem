@@ -1,0 +1,5 @@
+numpy
+pandas
+cvxpy
+requests
+beautifulsoup4
