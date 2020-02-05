@@ -68,7 +68,7 @@ We end up with 329 products with complete information (out of 583 total), includ
 | French Fromage Slices          |            0.62375 |        81   |        20 |             0 |               101   |
 | ...                            |                    |             |           |               |                     |
 
-The full dataset is [here](https://docs.google.com/spreadsheets/d/1X5XF01e8eRgeiZ5qztjQiB_anxsN0g4-pV9flheLbyc/edit#gid=79880678)
+The full dataset is [here](https://github.com/pdarche/trader-optimal/blob/master/data/clean_flyer_data.csv)
 
 ### The code
 With data in hand, we can solve for $`x`$. To do so we write the following small [CVXPY](https://github.com/cvxgrp/cvxpy/) program:
