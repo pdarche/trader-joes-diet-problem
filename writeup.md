@@ -1,6 +1,6 @@
 # The Trader Joe's Diet Problem
 
-"Adulting," as we Millenials say, is hard. It requires doing so many difficult things, like managing finances, finding a partner, establishing a career, and, most basic &ndash; yet often most difficult &ndash; of all, feeding yourself. You see, we want food that simulaneously cheap enough to match our debt-laden finances, and is nutritous enough to match whatever dietary restrictions we happen to be abiding by at the moment. This is no mean feat! Luckily, our fore-parents already thought about this problem and both have a name for it and a mathematical framework for solving it.
+"Adulting," as we Millenials say, is hard. It requires doing many difficult things like managing finances, finding a partner, and, most basic &ndash; yet often most difficult &ndash; of all, feeding yourself. You see, we want food that is cheap enough to match our debt-laden finances and nutritous enough to match whatever dietary restrictions we happen to be abiding by at the moment. Luckily, previous generations also experienced this challenge and both came up with a name for it and a mathematical framework for solving it.
 
 #### The problem
 That name is the [_diet problem_](https://neos-guide.org/content/diet-problem) and that framework is [linear programming](https://en.wikipedia.org/wiki/Linear_programming). The problem is specified as follows: "given a set of foods, along with the nutrient information for each food and the cost per serving of each food, select the number of servings of each food to purchase (and consume) so as to minimize the cost of the food while meeting the specified nutritional requirements." (description borrowed from linked page).
@@ -48,8 +48,8 @@ That's the general form of the problem. In our case, we want to minimize cost wh
 | Balanced      | 30     | 30        | 40              |
 | Keto          | 75     | 24        | 1               |
 | Atkins        | 45     | 45        | 10              |
-| Vegan         | 30     | 30        | 45              |
-| Gluten-free   | 30     | 30        | 45              |
+| Vegan         | 30     | 30        | 40              |
+| Gluten-free   | 30     | 30        | 40              |
 
 (For the vegan and gluten-free diets, we use the "balanced" macronutrient proportions.) For simplicity, we also add a constraint that the number of servings has to be an integer and restrict the total number of servings to four per food item so we make sure we get a little variety. Lastly, we'll use a recommended calorie count for roughly one day's worth of food.
 
@@ -184,7 +184,7 @@ __Gluten Free__
 |                               __total__ |     __828__ |   __440__ |      __1400__ |  __2668__  |                 20 |                    |__12.75__ |
 
 ### Discussion
-These results are ... not that bad! I mean, the vegan food combination sounds delicious. And, though I don't eat much meat, if I did, I'd defintely be happy with Cornish game hen with truffle butter and olive oil. It's interesting to see what's being picked up on. The program was clearly finding the items with the highest amounts of protein and fat per dollar. For protein, those items were: 1) creamy salted peanut butter, 2) sprouted wheat sourdough, 3) high protein tofu, 4) pumpkin pancake mix, and 4) the game hens, and most of those items were used when possible.
+These results are ... not that bad! I mean, the vegan food combination sounds delicious. And, though I don't eat much meat, if I did, I'd defintely be happy with Cornish game hen with truffle butter and olive oil. And the final prices are pretty good, too. Most of the diets came in under $10 per day, which is what many spend on lunch. It's interesting to see what's being picked up on. The program was clearly finding the items with the highest amounts of protein and fat per dollar. For protein, those items were: 1) creamy salted peanut butter, 2) sprouted wheat sourdough, 3) high protein tofu, 4) pumpkin pancake mix, and 4) the game hens, and most of those items were used when possible.
 
 That said, I don't think I'll be making long-term dietary plans around this. I could probably make some improvements by adding in constraints around vitamins or other nutritional features, but this approach is pretty limited and leaves out important parts of what goes into choosing a meal (like how much you enjoy a given food, how well each foods go together, how long it takes to prepare them, etc). But, all things considered, the output is pretty good. And even better, the dataset has a lot of valuable information to use in other analyses. So even if this doesn't actually solve the problem in any realistic way, it was worth trying.
 
